@@ -1,4 +1,24 @@
-"use strict";
+ let micN = 0;
+    let micO = 0;
+    let micA = 0;
+    for (let i = 0; i < personas.length; i++) {
+        if (personas[i][6] < 18.5) {
+            micN++;
+        } else if (personas[i][6] >= 18.5 && personas[i][6] < 24.9) {
+            micO++;
+        } else if (personas[i][6] >= 25 && personas[i][6] < 29.9) {
+            micA++;
+      
+  } 
+    }
+
+    alert(`Informe de IMC:\n\n- Bajo peso: ${micN}\n- Peso normal: ${micO}\n- Sobrepeso: ${micA}\n`);
+    alert(`El IMC de ${nombre} es: ${IMC.toFixed(2)}`);
+    alert(`El paciente con menor IMC es: ${pMimc[1]} con un IMC de ${menos_imc.toFixed(2)}`);   
+    "use strict";
+
+
+    
 const personas =[]
 let menos_imc = 0;
 let pMimc = []
@@ -18,7 +38,7 @@ const calculadora_imc = function () {
     let peso = parseFloat(prompt('Ingresa el peso de la persona (kg)'));
     let altura = parseFloat(prompt('Ingresa la altura de la persona (m)'));
     let IMC = peso / (altura * altura);
-    // Guardar los datogit config --global user.name "Tu Nombre"s en un array
+    // Guardar los datos en un array
     personas.push([id,nombre, edad, genero, peso, altura, IMC]);
 
     if (menos_imc == 0) {
@@ -54,7 +74,8 @@ const informe_imc = function () {
         if (personas[i][3] == "M") {
             hombres++;
             promedioedad_hombres += personas[i][2];
-        
+            console.log(personas[i][6])
+            console.log(mujeres)
             if (personas[i][6] > 25) {
                 sobrepeso_hombres++;
             }
@@ -69,12 +90,10 @@ const informe_imc = function () {
             menores++;
         }
     }
-    alert(`\n\n- Hombres: ${hombres}\n- Mujeres: ${mujeres}\n- Menores de edad: ${menores}\n\nInforme de IMC:\n\n- Sobrepeso hombres: ${sobrepeso_hombres}\n- Sobrepeso mujeres: ${sobrepeso_mujer}\n\nPromedio de edad hombres: ${promedioedad_hombres / hombres}\nPromedio de edad mujeres: ${promedioedad_mujeres / mujeres}`);
+    alert(`informe de la cantidad de Informe de IMC:\n\n- Bajo peso: ${micN}\n- Peso normal: ${micO}\n- Sobrepeso: ${micA}\n);personas:\n\n- Hombres: ${hombres}\n- Mujeres: ${mujeres}\n- Menores de edad: ${menores}\n\nInforme de IMC:\n\n- Sobrepeso hombres: ${sobrepeso_hombres}\n- Sobrepeso mujeres: ${sobrepeso_mujer}\n\nPromedio de edad hombres: ${promedioedad_hombres / hombres}\nPromedio de edad mujeres: ${promedioedad_mujeres / mujeres}`);
     alert(`El IMC de ${pMimc[1]} es: ${pMimc[6].toFixed(2)}`);
     alert(`El paciente con menor IMC es: ${pMimc[1]} con un IMC de ${menos_imc.toFixed(2)}`);
     alert(`El paciente con mayor IMC es: ${personas[0][1]} con un IMC de ${personas[0][6].toFixed(2)}`);
-    
-   
     return menu_principal();
 };
 
@@ -102,26 +121,3 @@ menu_principal()
 
 
 
-
-
-
-
-
-
-
-
-// Llamar a la función para iniciar el programa
-
-
-// let acumulador ++1 
-// let sumadora += edad / nv
-// let promedio = sumadora / acumulador
-
-//if personas[1] 
-//totalperifi++
-//edad =+ i
-// if (mic > micN = sobrepeso +1  )
-//  
-// Calculador el mic 
-// Informe de sexo
-// Infcalculadora_imc();orme promedio de edad
